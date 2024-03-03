@@ -35,7 +35,7 @@ jobs:
           # Run commands to build and push Docker images
           docker build -t ecommerce .
           docker tag ecommerce deepakprasad/ecommerce:latest
-          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push deepakprasad/ecommerce:latest
         env:
           DOCKER_CLI_ACI: 1
